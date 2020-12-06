@@ -136,4 +136,33 @@ order by num desc;
 ###############################################################################
 
 
+SELECT_QUERY = '''
+select name, species, birthdate from animals where species = 'opossum';
+'''
+
+## watch single quotes on strings 'jjdjd'
+
+
+QUERY = '''
+select animals.name
+from animals, diet
+where animals.species = diet.species and diet.food = 'fish';
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
