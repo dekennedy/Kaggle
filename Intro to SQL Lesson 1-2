@@ -149,11 +149,17 @@ from animals, diet
 where animals.species = diet.species and diet.food = 'fish';
 '''
 
+###############################################################################
 
 
+QUERY = '''
+select  diet.food, count(*) as num 
+from animals, diet
+where animals.species = diet.species
+group by diet.food 
+having num = 1
 
-
-
+'''
 
 
 
