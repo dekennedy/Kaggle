@@ -161,8 +161,30 @@ having num = 1
 
 '''
 
+select food, count(animals.name) as num
+from diet, animals 
+where diet.species = animals.species
+group by food
+having num = 1
 
+###############################################################################
 
+QUERY = '''
+select ordernames.t_order , count(animals.name) as num
+from animals, taxonomy, ordernames
+where taxonomy.t_order = ordernames.t_order and animals.species = taxonomy.species
+'''
+
+QUERY = '''
+select ordernames.name, count(*) as num
+from animals, taxonomy, ordernames
+where taxonomy.t_order = ordernames.t_order
+and animals.species = taxonomy.name
+group by ordernames.name
+order by num desc
+;
+'''
+'''
 
 
 
