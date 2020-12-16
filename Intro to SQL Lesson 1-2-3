@@ -188,8 +188,7 @@ order by num desc
 '''
 
 #####################################################################################
-#####################################################################################
-#####################################################################################
+
 
 
 QUERY = '''
@@ -200,10 +199,37 @@ where name = 'Fred';
 
 
 #####################################################################################
+Lesson 3 Starts Below
 #####################################################################################
-###############################################################
-#########################
+ 
+ 
+ 
+import sqlite3
 
+# Fetch some student records from the database.
+db = sqlite3.connect("students")
+c = db.cursor()
+query = "select name, id from students order by name;"
+c.execute(query)
+rows = c.fetchall()
+
+# First, what data structure did we get?
+print "Row data:"
+print rows
+
+# And let's loop over it too:
+print
+print "Student names:"
+for row in rows:
+  print "  ", row[0]
+
+db.close()
+
+
+
+ 
+ 
+ 
 
 
 
