@@ -255,7 +255,7 @@ def add_post(content):
 	db.commit()
 	db.close()
 
-###################
+##############################################################################################################
 
  # "Database code" for the DB Forum.
 
@@ -266,13 +266,17 @@ import bleach
 DBNAME = "forum"
 
 
-# POSTS = [("This is the first post.", datetime.datetime.now())]
 
 def get_posts():
 
 	db = psycopg2.connect(database = DBNAME)
 	c = db.cursor()
-	c.execute("update posts set content = 'Cheese' where lower(content) like '%spam%' ")
+	c.execute("update posts set content = 'Cheese' where lower(content) like '%spam%' ")		# lower(content) takes soulves the case match issue.
+	
+	### add Code to Delete the Cheese Text
+	
+	### c.execute(" remove post where content = 'Cheese' ")			##Check syntax
+	
 	c.execute("select content, time from posts order by time desc")
 	posts = c.fetchall()	
 	db.close()
