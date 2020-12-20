@@ -277,7 +277,7 @@ def get_posts():
 	
 	c.exvute(" delete content from posts where content = 'Cheese' ")
 	
-	### c.execute(" remove post where content = 'Cheese' ")			##Check syntax
+	c.execute("delete from posts where content = 'Cheese' ")		
 	
 	c.execute("select content, time from posts order by time desc")
 	posts = c.fetchall()	
