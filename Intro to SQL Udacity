@@ -303,6 +303,21 @@ def add_post(content):
 
 
 
+vagrant=> CREATE DATABASE sardines;
+CREATE DATABASE
+vagrant=> \c sardines
+####You are now connected to database "sardines" as user "vagrant".
+sardines=> CREATE TABLE FISH (
+sardines(> text text,
+sardines(> serial varchar );
+####CREATE TABLE
+sardines=> INSERT INTO FISH values ('This is text!');
+###INSERT 0 1
+sardines=>
+
+
+
+
 
 
 
