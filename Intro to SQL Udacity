@@ -319,6 +319,10 @@ sardines=>
 
 ################
 
+
+
+## Join a table to itself
+
 -- Roommate Finder v0.9
 --
 -- This query is intended to find pairs of roommates.  It almost works!
@@ -340,8 +344,23 @@ select a.id, b.id, a.building, a.room
 
 
 
+##################
 
 
+select programs.name, count(bugs.filename) as num
+  from programs left join bugs				### get table to show a 0 
+        on programs.filename = bugs.filename
+  group by programs.name
+  order by num;
+
+
+##########
+
+
+def lightweights(cursor):
+    """Returns a list of the players in the db whose weight is less than the average."""
+    cursor.execute("select name, weight from players, (select avg(weight) as av from players) as subq where weight < av;")
+    return cursor.fetchall()
 
 
 
