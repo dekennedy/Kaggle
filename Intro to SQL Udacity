@@ -363,10 +363,25 @@ def lightweights(cursor):
     return cursor.fetchall()
 
 
-################################
+################################ Views
 
 
+-- Here's a select statement that runs on the zoo database.
+-- It selects the species with the top five highest populations in the zoo.
+-- Change it into a statement that creates a view named "topfive".
 
+
+create view topfive as
+    select species, count(*) as num 
+      from animals
+      group by species
+      order by num desc
+      limit 5;
+
+
+-- Don't change the statement below!  It's there to test the view.
+
+select * from topfive;
 
 
 
