@@ -17,6 +17,9 @@ query_popular = """
 # your quota, with the limit set to 10 GB)
 
 safe_config = bigquery.QueryJobConfig(maximum_bytes_billed=10**10)
+
+
+# Set up Job
 query_job = client.query(query_popular, job_config=safe_config)
 
 # API request - run the query, and convert the results to a pandas DataFrame
