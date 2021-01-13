@@ -1,0 +1,14 @@
+
+
+# Query to find out the number of accidents for each day of the week
+query = """
+        SELECT COUNT(consecutive_number) AS num_accidents, 
+               EXTRACT(DAYOFWEEK FROM timestamp_of_crash) AS day_of_week
+        FROM `bigquery-public-data.nhtsa_traffic_fatalities.accident_2015`
+        GROUP BY day_of_week
+        ORDER BY num_accidents DESC
+        """
+        
+        
+        
+        
