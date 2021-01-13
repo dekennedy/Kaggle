@@ -10,5 +10,16 @@ query = """
         """
         
         
-        
+     # Set up the query (cancel the query if it would use too much of 
+# your quota, with the limit set to 1 GB)
+safe_config = bigquery.QueryJobConfig(maximum_bytes_billed=10**9)
+query_job = client.query(query, job_config=safe_config)
+
+# API request - run the query, and convert the results to a pandas DataFrame
+accidents_by_day = query_job.to_dataframe()
+
+# Print the DataFrame
+accidents_by_day
+     
+     
         
