@@ -22,4 +22,24 @@ accidents_by_day = query_job.to_dataframe()
 accidents_by_day
      
      
-        
+     ###
+     
+     
+num_accidents	day_of_week
+0	5659	7
+1	5298	1
+2	4916	6
+3	4460	5
+4	4182	4
+5	4038	2
+6	3985	3
+
+
+###an integer between 1 (Sunday) and 7 (Saturday), inclusively"
+
+
+
+
+
+
+
