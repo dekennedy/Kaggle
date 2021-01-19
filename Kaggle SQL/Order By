@@ -14,7 +14,7 @@ query2 = """
                EXTRACT(DAYOFWEEK FROM timestamp_of_crash) AS day_of_week
         FROM `bigquery-public-data.nhtsa_traffic_fatalities.accident_2015`
         GROUP BY day_of_week
-        ORDER BY num_accidents DESC
+        ORDER BY num_accidents
         """        
         
         
