@@ -8,6 +8,15 @@ query = """
         GROUP BY day_of_week
         ORDER BY num_accidents DESC
         """
+
+query2 = """
+        SELECT COUNT(consecutive_number) AS num_accidents, 
+               EXTRACT(DAYOFWEEK FROM timestamp_of_crash) AS day_of_week
+        FROM `bigquery-public-data.nhtsa_traffic_fatalities.accident_2015`
+        GROUP BY day_of_week
+        ORDER BY num_accidents DESC
+        """        
+        
         
         
      # Set up the query (cancel the query if it would use too much of 
