@@ -1,1 +1,16 @@
 
+A = [2, 16, 26, 32, 52, 71, 80, 88]
+
+# These are already sorted:
+assert A == sorted(A)
+
+
+def contains(A, x):
+    """Returns True only if the value `x` exists in `A`."""
+    return x in A
+
+print("A contains 32: {}".format(contains(A, 32)))
+print("A contains 7: {}".format(contains(A, 7)))
+print("A contains -10: {}".format(contains(A, -10)))
+
+
