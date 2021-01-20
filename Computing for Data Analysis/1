@@ -14,3 +14,14 @@ print("A contains 7: {}".format(contains(A, 7)))
 print("A contains -10: {}".format(contains(A, -10)))
 
 
+def ordered_contains(S, x):
+    # You may assume that `S` is sorted
+###
+### YOUR CODE HERE
+###
+    
+print("A contains 32: {}".format(ordered_contains(A, 32)))
+print("A contains 7: {}".format(ordered_contains(A, 7)))
+print("A contains -10: {}".format(ordered_contains(A, -10)))
+print("\n(Did those results match the earlier example?)")
+
