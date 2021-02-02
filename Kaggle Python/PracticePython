@@ -33,6 +33,45 @@ area = pi*radius*radius
 
 
 
+#####
+
+a % b	Modulus	Integer remainder after division of a by b
+
+
+
+# Variables representing the number of candies collected by alice, bob, and carol
+alice_candies = 121
+bob_candies = 77
+carol_candies = 109
+
+# Your code goes here! Replace the right-hand side of this assignment with an expression
+# involving alice_candies, bob_candies, and carol_candies
+
+total = alice_candies + bob_candies + carol_candies
+print(total)
+
+to_smash = total % 3
+
+print('smash' to_smash)
+
+# Check your answer
+q4.check()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## 2.
 Add code to the following cell to swap variables a and b (so that a refers to the object previously referred to by b and vice versa).
