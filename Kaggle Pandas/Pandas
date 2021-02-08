@@ -3,6 +3,25 @@
 reviews.head()
 
 
+first_description = reviews['description'].iloc[0]
 
+# Check your answer
+q2.check()
+first_description
+
+
+first_descriptions = reviews.description.head(10)
+# Check your answer
+q4.check()
+first_descriptions
+
+
+####
+
+cols = ['country','variety']
+df = reviews[cols].loc[:99]
+
+
+italian_wines = reviews[reviews.country == 'Italy']
 
 
