@@ -90,6 +90,36 @@ b = temp
 
 
 
+###
+
+def round_to_two_places(num):
+    """Return the given number rounded to two decimal places. 
+    
+    >>> round_to_two_places(3.14159)
+    3.14
+    """
+    return round(num, 2)
+
+
+
+round(366.11111 , -2)
+#nearest 100
+
+x = -10
+y = 5
+# Which of the two variables above has the smallest absolute value?
+smallest_abs = min(abs(x),abs((y)))
+
+smallest_abs
+
+
+
+
+         
+
+
+
+
 
 
 
