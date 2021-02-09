@@ -124,14 +124,21 @@ print(f(5))
 primes = [2, 3, 5, 7]
 sum(primes)
 
+planets.append('Pluto')
+
+
+"Earth" in planets
+
+True
 
 
 
 
+### Tuples
 
+t = (1, 2, 3)
 
-
-
+() and hey cannot be modified (they are immutable).
 
 
 
