@@ -119,7 +119,17 @@ def f(x):
 print(f(5))
 
 
-         
+### Lists
+
+primes = [2, 3, 5, 7]
+sum(primes)
+
+
+
+
+
+
+
 
 
 
