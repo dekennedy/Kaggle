@@ -46,3 +46,15 @@ top_oceania_wines = df2[df2.points >= 95]
 # Check your answer
 q9.check()
 top_oceania_wines
+
+
+#Pandas Numer 3 
+
+reviews.points.describe()       *summary stats ets. mean, max count
+reviews.taster_name.unique()    #unique values in the DF
+
+
+
+
+
+
