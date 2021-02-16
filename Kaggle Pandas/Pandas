@@ -54,6 +54,10 @@ reviews.points.describe()        *summary stats ets. mean, max count
 reviews.taster_name.unique()      #unique values in the DF
 
 
+##Group by
+
+reviews.groupby('points').points.count()
+
 
 
 
