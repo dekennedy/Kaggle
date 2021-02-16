@@ -58,11 +58,19 @@ reviews.taster_name.unique()      #unique values in the DF
 
 reviews.groupby('points').points.count()
 
+reviews.groupby(['country', 'province']).apply(lambda df: df.loc[df.points.idxmax()])
+
+reviews.groupby(['country']).price.agg([len, min, max])
+
+ countries_reviewed = reviews.groupby(['country', 'province']).description.agg([len])
+
+countries_reviewed.reset_index()
+
+countries_reviewed.sort_values(by='len', ascending=False)
+
+countries_reviewed.sort_values(by=['country', 'len'])   ##Country then Len
 
 
-
-
-  
 
 
 
