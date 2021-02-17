@@ -73,4 +73,5 @@ countries_reviewed.sort_values(by=['country', 'len'])   ##Country then Len
 
 best_rating_per_price = reviews.groupby('price')['points'].max().sort_index()
 
+price_extremes = reviews.groupby(['variety']).price.agg([min, max])
 
