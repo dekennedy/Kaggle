@@ -6,9 +6,22 @@ from sklearn.model_selection import train_test_split
 
 fruits = pd.read_table('readonly/fruit_data_with_colors.txt')
 
+ ## working with regressions.
+ 
 
+poly = PolynomialFeatures(degree=12)
+    
+    # Shape Polinomial Features
+    X_train_poly = poly.fit_transform(X_train.reshape(11,1))
+    X_test_poly = poly.fit_transform(X_test.reshape(4,1))
+    
+    # Linear Regression
+    linreg = LinearRegression().fit(X_train_poly, y_train)
+    lin_r2_test = linreg.score(X_test_poly, y_test)
 
-
-
+    # Lasso Regression
+    linlasso = Lasso(alpha=0.01, max_iter = 10000).fit(X_train_poly, y_train)
+    las_r2_test = linlasso.score(X_test_poly, y_test)
+    
 
 
