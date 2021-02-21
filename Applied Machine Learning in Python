@@ -5,3 +5,10 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 fruits = pd.read_table('readonly/fruit_data_with_colors.txt')
+
+
+
+
+
+
+
