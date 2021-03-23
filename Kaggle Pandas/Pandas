@@ -84,6 +84,8 @@ price_extremes = reviews.groupby(['variety']).price.agg([min, max])
 reviews.price.dtype
 
 reviews[pd.isnull(reviews.country)]
+reviews.region_2.fillna("Unknown")
+reviews.taster_twitter_handle.replace("@kerinokeefe", "@kerino")
 
 
 
