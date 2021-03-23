@@ -75,3 +75,29 @@ best_rating_per_price = reviews.groupby('price')['points'].max().sort_index()
 
 price_extremes = reviews.groupby(['variety']).price.agg([min, max])
 
+
+####################################
+
+#Data Types and Missing Values
+
+
+reviews.price.dtype
+
+reviews[pd.isnull(reviews.country)]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
