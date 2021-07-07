@@ -134,6 +134,12 @@ group by species
 order by num desc;
 
 
+QUERY = '''
+select species, count(*) as number from animals
+group by species
+order by number desc;
+
+
 ###############################################################################
 
 
