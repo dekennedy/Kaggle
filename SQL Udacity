@@ -150,11 +150,17 @@ select name, species, birthdate from animals where species = 'opossum';
 ## watch single quotes on strings 'jjdjd'
 
 
+
+#Simple joins where the tablename.column and table2.column2
+
 QUERY = '''
 select animals.name
 from animals, diet
 where animals.species = diet.species and diet.food = 'fish';
 '''
+
+
+
 
 ###############################################################################
 
