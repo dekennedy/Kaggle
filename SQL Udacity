@@ -174,7 +174,7 @@ having num = 1
 
 '''
 
-cartesian Product:
+cartesian Product Above - Use Join instead 
 
 
 QUERY = '''
@@ -184,6 +184,13 @@ group by diet.food
 having num = 1
 
 '''
+
+####
+
+	select animals.name, animals.species, diet.food
+       from animals join diet
+       on animals.species = diet.species;
+
 
 
 
